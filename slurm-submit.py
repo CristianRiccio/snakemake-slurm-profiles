@@ -96,7 +96,7 @@ if "resources" in job_properties:
 
 # Threads
 if "threads" in job_properties:
-    arg_dict["ntasks"] = job_properties["threads"]
+    arg_dict["ntasks"] = min(job_properties["threads"], 24)
 
 opt_keys = ["array", "account", "begin", "cpus_per_task",
             "dependency", "workdir", "error", "job_name", "mail_type",
