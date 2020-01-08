@@ -5,3 +5,5 @@
 0.1% of the edits come from the Cambridge snakemake SLURM integration working group
 
 I have added an anonymised config file called configAnonymised.yaml. For your config file, it should be called config.yaml
+
+If you so wish, you can limit the number of threads used by a job in the slurm-submit.py file. 
