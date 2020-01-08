@@ -1,0 +1,15 @@
+{
+    "__default__" :
+    {
+        "A" : "overall",
+        "nodes": 1,
+        "ntasks": 1,
+        "cpus" : "{threads}",
+        "partition" : "LONG",
+        "jobName" : "{rule}{wildcards}",
+        "output": "output/slurm/output/{rule}/{wildcards}.o",
+        "error": "output/slurm/error/{rule}/{wildcards}.e",
+        "mailUser": "email address",
+        "mailType": "ALL"
+    }
+}
