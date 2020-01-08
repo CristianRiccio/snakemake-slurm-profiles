@@ -1,0 +1,16 @@
+restart-times: 1
+jobscript: "slurm-jobscript.sh"
+cluster: "slurm-submit.py"
+cluster-status: "slurm-status.py"
+max-jobs-per-second: 1
+max-status-checks-per-second: 10
+local-cores: 2
+cluster-config: "/path/to/slurm.json"
+cluster: "/path/to/home/.config/snakemake/slurm/slurm-submit.py --partition '{cluster.partition}' --error '{cluster.error}' --output '{cluster.output}' --job-name '{cluster.jobName}' --mail-user {cluster.mailUser} --mail-type '{cluster.mailType}'"
+resources: ['downloads=1', 'irods=10']
+use-conda: true
+printshellcmds: true
+keep-going: true
+reason: true
+rerun-incomplete: true
+jobs: 2000
